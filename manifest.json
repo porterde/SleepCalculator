@@ -1,6 +1,5 @@
 {
 "name": "Sleep Calculator",
-"short_name": "Sleep Calc",
 "start_url": "/",
 "display": "standalone",
 "background_color": "#ddd6fe",
