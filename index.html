@@ -155,10 +155,11 @@
                 totalSleepMinutes = wakeMinutes - sleepMinutes;
             }
             
-            // Subtract awake time
+            // Subtract awake time, but ensure we don't go below zero
             totalSleepMinutes -= awakeMinutes;
             
-            return Math.max(0, totalSleepMinutes); // Ensure non-negative
+            // Always return a non-negative value - if awake time exceeds sleep duration, return 0
+            return Math.max(0, totalSleepMinutes);
         }
         
         function calculateSleep() {
